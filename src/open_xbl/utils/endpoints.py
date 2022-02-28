@@ -46,5 +46,5 @@ API_PATH = {
     "presence": "/presence",
     "presence_xuid": "/{xuid}/presence",
     "recent_players": "/recent-players",
-    "stats_game": "/achievements/stats/{titleId}"
+    "stats_game": "/achievements/stats/{titleId}",
 }
