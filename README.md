@@ -1,6 +1,6 @@
 <img src="assets/images/banner.jpeg">
 
-# <img src="assets/images/icon.png" height="24px"> Open XBL LIVE API
+# <img src="assets/images/icon.png" height="24px"> Open XBL Live API
 
 Asynchronous Open XBOX Live API wrapper written with aiohttp.
 
