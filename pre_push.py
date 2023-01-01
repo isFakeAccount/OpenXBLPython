@@ -3,7 +3,6 @@
 import argparse
 import sys
 from subprocess import CalledProcessError, check_call
-from tempfile import TemporaryDirectory
 
 
 def do_process(args, shell=False):
@@ -31,8 +30,7 @@ def do_process(args, shell=False):
 def run_static():
     """Runs the static tests.
 
-    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return
-    statuscode 1
+    Returns a statuscode of 0 if everything ran correctly. Otherwise, it will return statuscode 1
 
     """
     success = True
@@ -47,8 +45,7 @@ def run_static():
 def run_unit():
     """Runs the unit-tests.
 
-    Follows the behavior of the static tests, where any failed tests cause pre_push.py
-    to fail.
+    Follows the behavior of the static tests, where any failed tests cause pre_push.py to fail.
 
     """
     return do_process(["pytest"])

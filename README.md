@@ -4,5 +4,5 @@
 
 Asynchronous Open XBOX Live API wrapper written with aiohttp.
 
-| :exclamation: | The package is in progress please check back later |
-| ------------- |:---------------------------------------------------|
+| :exclamation:  | The package is in progress please check back later |
+|:---------------|:---------------------------------------------------|

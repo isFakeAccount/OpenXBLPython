@@ -1,15 +1,40 @@
-[build-system]
-requires = ["setuptools>=60.0", "wheel"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "openxblpython"
+version = "0.0.1"
+description = "Asynchronous Python API Wrapper for Open XBL"
+authors = ["isFakeAccount <trevorphillips@gmx.us>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/isFakeAccount"
+repository = "https://github.com/isFakeAccount/OpenXBLPython"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
 
-[tool.pytest.ini_options]
-testpaths = "tests"
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = "^3.8.3"
+attrs = "^22.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+mypy = "^0.991"
+vcrpy = "^4.2.1"
+python-dotenv = "^0.21.0"
+pre-commit = "^2.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
-mypy_path = "src"
+strict = true
 check_untyped_defs = true
 disallow_any_generics = true
-ignore_missing_imports = true
 no_implicit_optional = true
 show_error_codes = true
 strict_equality = true
@@ -18,3 +43,8 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+ignore_missing_imports = true
+exclude = [".venv"]
+
+[tool.black]
+line-length = 160

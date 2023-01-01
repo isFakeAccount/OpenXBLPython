@@ -1,5 +1,7 @@
 """List of API endpoints for OPEN XBL."""
 
+BASE_URL = "https://xbl.io/api/v2"
+
 API_PATH = {
     "account": "/account",
     "account_xuid": "/account/{xuid}",
